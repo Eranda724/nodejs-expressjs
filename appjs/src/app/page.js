@@ -9,13 +9,16 @@ export default function Home() {
       </h1>
       <ul>
         <li>
-          <Link href="/doctor">Doctor</Link>
+          <Link href="/provider/doctor">Doctor</Link>
         </li>
         <li>
           <Link href="/about">About</Link>
         </li>
         <li>
           <Link href="/contact">Contact</Link>
+        </li>
+        <li>
+          <Link href="/provider/teacher">Teacher</Link>
         </li>
       </ul>
 
