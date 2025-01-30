@@ -1,13 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
+import styles from './contact.module.css'
 
 function page() {
   return (
     <>
     <h1>Contact Us</h1>
-    <li>
-      <Link href="/">back</Link>
-    </li>
+    <Link href="/" className={styles.link}>back</Link>
     </>
   )
 }

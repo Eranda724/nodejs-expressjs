@@ -28,11 +28,13 @@ function page() {
     <div>Teacher List</div>
 
     <ul>
-        {teachers.map((teacher)=>{
-            return(
-                <li><Link href={'/provider/teacher/${teacher.name}'}>{teacher.name}</Link></li>
-            )
-        })}
+        {
+            teachers.map((teacher)=>(
+                <li key={teacher.id}>
+                    <Link href={`/provider/teacher/${teacher.id}`}>{teacher.name}</Link>
+                </li>
+            ))
+        }
     </ul>
 
     </>
