@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 
 function page() {
 
@@ -29,7 +30,7 @@ function page() {
     <ul>
         {teachers.map((teacher)=>{
             return(
-                <li><link href={'/provider/teacher/${teacher.teachers}'}>{teacher.teachers}</link></li>
+                <li><Link href={'/provider/teacher/${teacher.name}'}>{teacher.name}</Link></li>
             )
         })}
     </ul>
