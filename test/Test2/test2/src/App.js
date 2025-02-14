@@ -5,7 +5,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Welcome</h1>
-        <button className="user">Click Me</button>
+        <button className="user" onClick={"/UserForm"}>
+          Click Me
+        </button>
         <p>Test App</p>
       </header>
     </div>
