@@ -1,15 +1,14 @@
-import { Box, Grid, Typography, TextField, Button, Input } from "@mui/material";
+import { Box, Grid, Typography, Button, Input } from "@mui/material";
 
 const UserForm = () => {
   return (
     <Grid container sx={{ height: "100vh" }}>
-      {/* Left Side - Image Section */}
       <Grid
         item
         xs={12}
         md={6}
         sx={{
-          backgroundImage: "url('/doc.png')", // Replace with actual path
+          backgroundImage: "url('/doc.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           display: "flex",
@@ -18,7 +17,6 @@ const UserForm = () => {
         }}
       ></Grid>
 
-      {/* Right Side - Form Section */}
       <Grid
         item
         xs={12}
@@ -96,7 +94,6 @@ const UserForm = () => {
               />
             </Grid>
 
-            {/* Service ID Field */}
             <Grid item xs={12}>
               <Typography
                 component="label"
