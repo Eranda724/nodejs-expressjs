@@ -1,8 +1,8 @@
-import UserForm from "./UserForm";
+import LoginForm from "./LoginForm";
 import React from "react";
 
 const User = () => {
-  return <UserForm />;
+  return <LoginForm />;
 };
 
 export default User;

@@ -1,8 +1,25 @@
-import { Box, Grid, Typography, Button, Input } from "@mui/material";
+import { Box, Grid, Typography, Button, TextField } from "@mui/material";
+import { Link } from "react-router-dom";
 
-const UserForm = () => {
+// Inside the form, add this below the login button
+<Typography align="center" sx={{ marginTop: 2 }}>
+  Don't have an account? <Link to="/register">Register here</Link>
+</Typography>;
+
+const LoginForm = () => {
   return (
-    <Grid container sx={{ height: "100vh" }}>
+    <Grid
+      container
+      spacing={0}
+      sx={{
+        height: "899px",
+        width: "1196px",
+        marginTop: "62px",
+        marginLeft: "122px",
+        borderRadius: "40px",
+        boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
+      }}
+    >
       <Grid
         item
         xs={12}
@@ -11,9 +28,9 @@ const UserForm = () => {
           backgroundImage: "url('/doc.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          display: "flex",
-          alignItems: "center",
           justifyContent: "center",
+          maxHeight: "899px",
+          maxWidth: "598px",
         }}
       ></Grid>
 
@@ -26,23 +43,23 @@ const UserForm = () => {
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
-          backgroundColor: "#dff6f8",
+          backgroundColor: "#FFFFFF47",
           padding: 4,
         }}
       >
         <img
-          src="/pic1.png"
+          src="/as.png"
           alt="Logo"
-          style={{ width: "250px", height: "auto", marginBottom: "40px" }}
+          style={{ width: "176px", height: "91px" }}
         />
         <Box
           sx={{
-            width: "100%",
-            maxWidth: 400,
-            backgroundColor: "#a5d6e1",
+            backgroundColor: "#DEDEDE",
             padding: 4,
-            borderRadius: "10px",
+            borderRadius: "15px",
             boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
+            maxWidth: "422px",
+            maxHeight: "586px",
           }}
         >
           <Typography
@@ -60,18 +77,20 @@ const UserForm = () => {
             <Grid item xs={12}>
               <Typography
                 component="label"
-                htmlFor="email"
+                htmlFor="SId"
                 sx={{ fontSize: "16px", color: "black" }}
               >
-                {" "}
-                Email:{" "}
+                Email:
               </Typography>
-              <Input
+              <TextField
+                label="Email"
                 type="email"
                 id="email"
                 name="email"
+                variant="outlined"
                 fullWidth
-                sx={{ marginTop: "5px" }}
+                margin="normal"
+                sx={{ backgroundColor: "white" }}
               />
             </Grid>
 
@@ -79,18 +98,20 @@ const UserForm = () => {
             <Grid item xs={12}>
               <Typography
                 component="label"
-                htmlFor="password"
+                htmlFor="SId"
                 sx={{ fontSize: "16px", color: "black" }}
               >
-                {" "}
-                Password:{" "}
+                Password:
               </Typography>
-              <Input
+              <TextField
+                label="Password"
                 type="password"
                 id="password"
                 name="password"
+                variant="outlined"
                 fullWidth
-                sx={{ marginTop: "5px" }}
+                margin="normal"
+                sx={{ backgroundColor: "white" }}
               />
             </Grid>
 
@@ -100,15 +121,16 @@ const UserForm = () => {
                 htmlFor="SId"
                 sx={{ fontSize: "16px", color: "black" }}
               >
-                {" "}
-                Service ID:{" "}
+                Service ID:
               </Typography>
-              <Input
-                type="text"
+              <TextField
+                label="Service ID"
                 id="SId"
-                name="Sid"
+                name="SId"
+                variant="outlined"
                 fullWidth
-                sx={{ marginTop: "5px" }}
+                margin="normal"
+                sx={{ backgroundColor: "white" }}
               />
             </Grid>
           </Grid>
@@ -122,20 +144,21 @@ const UserForm = () => {
             Forgot Password?{" "}
           </Typography>
 
-          <Button
-            fullWidth
-            variant="contained"
-            sx={{
-              backgroundColor: "#23bfce",
-              color: "black",
-              marginTop: "20px",
-              padding: "10px",
-              borderRadius: "5px",
-              "&:hover": { backgroundColor: "#1a9ca8" },
-            }}
-          >
-            Login
-          </Button>
+          <Grid item xs={12} display="flex" justifyContent="center">
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: "#919191",
+                color: "black",
+                marginTop: "20px",
+                padding: "10px",
+                borderRadius: "5px",
+                "&:hover": { backgroundColor: "#919191" },
+              }}
+            >
+              Login
+            </Button>
+          </Grid>
 
           <Typography
             variant="body2"
@@ -153,13 +176,22 @@ const UserForm = () => {
               marginTop: "10px",
             }}
           >
-            <Button variant="outlined" sx={{ minWidth: 50 }}>
+            <Button
+              variant="outlined"
+              sx={{ minWidth: 50, backgroundColor: "white" }}
+            >
               <img src="/goo.jpg" alt="Google" width="24" height="24" />
             </Button>
-            <Button variant="outlined" sx={{ minWidth: 50 }}>
+            <Button
+              variant="outlined"
+              sx={{ minWidth: 50, backgroundColor: "white" }}
+            >
               <img src="/git.png" alt="GitHub" width="24" height="24" />
             </Button>
-            <Button variant="outlined" sx={{ minWidth: 50 }}>
+            <Button
+              variant="outlined"
+              sx={{ minWidth: 50, backgroundColor: "white" }}
+            >
               <img src="/fb.png" alt="Facebook" width="24" height="24" />
             </Button>
           </Box>
@@ -169,10 +201,10 @@ const UserForm = () => {
             sx={{ marginTop: "20px", textAlign: "center" }}
           >
             Don't have an account yet?{" "}
-            <span style={{ color: "#007bff", cursor: "pointer" }}>
+            <Link to="/reg" style={{ color: "#007bff", cursor: "pointer" }}>
               {" "}
               Register for free{" "}
-            </span>
+            </Link>
           </Typography>
         </Box>
       </Grid>
@@ -180,4 +212,4 @@ const UserForm = () => {
   );
 };
 
-export default UserForm;
+export default LoginForm;
