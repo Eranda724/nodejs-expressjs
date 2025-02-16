@@ -13,7 +13,7 @@ const RegisterForm = () => {
   return (
     <Grid
       container
-      spacing={0}
+      spacing={2}
       sx={{
         height: "100vh",
         width: "100%",
@@ -21,9 +21,9 @@ const RegisterForm = () => {
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#f5f5f5",
+        padding: { xs: "20px", md: "40px" },
       }}
     >
-      {/* Left Section with Images */}
       <Grid
         item
         xs={12}
@@ -31,24 +31,36 @@ const RegisterForm = () => {
         sx={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
           alignItems: "center",
-          gap: 2,
+          justifyContent: "center",
+          gap: "-50px",
         }}
       >
         <img
           src="/regup.png"
-          alt="Booking Image 1"
-          style={{ width: "80%", borderRadius: "10px" }}
+          alt="Booking 1"
+          style={{
+            width: "80%",
+            maxWidth: "400px",
+            borderRadius: "40px 10px 0 80px",
+            boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.1)",
+            marginTop: "50px",
+            gap: "px",
+          }}
         />
         <img
           src="/regdown.png"
-          alt="Booking Image 2"
-          style={{ width: "80%", borderRadius: "10px" }}
+          alt="Booking 2"
+          style={{
+            width: "80%",
+            maxWidth: "400px",
+            borderRadius: "80px 40px 0 40px",
+            boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.1)",
+            marginLeft: "50px",
+            marginBottom: "50px",
+          }}
         />
       </Grid>
-
-      {/* Right Section with Form */}
       <Grid
         item
         xs={12}
@@ -66,21 +78,16 @@ const RegisterForm = () => {
             padding: "30px",
             borderRadius: "20px",
             boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+            textAlign: "center",
           }}
         >
-          <Typography
-            variant="h5"
-            fontWeight="bold"
-            textAlign="center"
-            gutterBottom
-          >
+          <Typography variant="h5" fontWeight="bold" gutterBottom>
             Create your account.
           </Typography>
-          <Typography variant="body2" textAlign="center" color="gray">
-            Already have an account? <Link to="/login">Sign In</Link>
+          <Typography variant="body2" color="gray">
+            Already have an account? <Link to="/User">Sign In</Link>
           </Typography>
 
-          {/* Form Fields */}
           <TextField
             fullWidth
             label="Full Name"
@@ -127,11 +134,7 @@ const RegisterForm = () => {
             Signup
           </Button>
 
-          <Typography
-            variant="body2"
-            textAlign="center"
-            sx={{ marginTop: "20px" }}
-          >
+          <Typography variant="body2" sx={{ marginTop: "20px" }}>
             OR
           </Typography>
 
@@ -147,7 +150,7 @@ const RegisterForm = () => {
               variant="outlined"
               sx={{ minWidth: 50, backgroundColor: "white" }}
             >
-              <img src="/google.png" alt="Google" width="24" height="24" />
+              <img src="/goo.png" alt="Google" width="24" height="24" />
             </Button>
             <Button
               variant="outlined"

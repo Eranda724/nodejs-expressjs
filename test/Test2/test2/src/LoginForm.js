@@ -180,7 +180,7 @@ const LoginForm = () => {
               variant="outlined"
               sx={{ minWidth: 50, backgroundColor: "white" }}
             >
-              <img src="/goo.jpg" alt="Google" width="24" height="24" />
+              <img src="/goo.png" alt="Google" width="24" height="24" />
             </Button>
             <Button
               variant="outlined"
